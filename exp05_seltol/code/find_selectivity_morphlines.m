@@ -36,7 +36,8 @@ for layerid=1:nL
         ind_1=pairs_sel(ind,1);ind_2=pairs_sel(ind,2);
         SEL_CORR(ind,layerid)=nancorrcoef(SPAR(:,ind_1),SPAR(:,ind_2));
     end
-    max_sparsness=max(SPAR,[],2);refset_sparsness=SPAR(:,5);
+    max_sparsness=max(SPAR(:,1:4),[],2); % Max. correlation among four morphilines
+    refset_sparsness=SPAR(:,5);
     corr_max_sparsness_ref(layerid)=nancorrcoef(max_sparsness,refset_sparsness); % correlation between max sparsness and reference set
 end
 end

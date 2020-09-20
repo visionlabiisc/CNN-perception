@@ -35,17 +35,18 @@ reference_name='Zhivago and Arun, 2016';
 
 
 for iter=1:length(type)
+    fprintf('Network = %s', type{iter})
     tstart=tic;
     % Morphlines
     % Extracting Features
-    fprintf('\n Extracting Features\n');
+    fprintf('\n Extracting Features-Morphlines');
     features=[];
     features=extract_features(stim,type{iter},dagg_flag(iter),run_path);
     corr_max_sparsness_ref=find_selectivity_morphlines(features);
     MI_across_layers{iter,1}=corr_max_sparsness_ref;
     
     % Shape vs Textures
-    fprintf('\n Extracting Features\n');
+    fprintf('\n Extracting Features-Shape-Texture \n');
     features=[];
     features=extract_features(stim_ST,type{iter},dagg_flag(iter),run_path);
     corr_sparsness_texture=find_selectivity_textures_shapes(features,conditions_ST);
