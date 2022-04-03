@@ -58,14 +58,14 @@ for iter=1:length(type)
     top_five=reshape(top_five,[2,nimages/2]);% congruent ; Incongruent
     top_one=reshape(top_one,[2,nimages/2]);% congruent ; Incongruent
     cnn_mean_accuracy(1,1)=mean(top_five(1,:));% congruent
-    cnn_std_accuracy(1,1)=nansem(top_five(1,:),2);% congruent
+    cnn_std_accuracy(1,1)=nansem(top_five(1,:));% congruent
     cnn_mean_accuracy(1,2)=mean(top_five(2,:));% incongruent
-    cnn_std_accuracy(1,2)=nansem(top_five(2,:),2);% incongruent
+    cnn_std_accuracy(1,2)=nansem(top_five(2,:));% incongruent
     % top one
     cnn_mean_accuracy(2,1)=mean(top_one(1,:));% congruent
-    cnn_std_accuracy(2,1)=nansem(top_one(1,:),2);% congruent
+    cnn_std_accuracy(2,1)=nansem(top_one(1,:));% congruent
     cnn_mean_accuracy(2,2)=mean(top_one(2,:));% incongruent
-    cnn_std_accuracy(2,2)=nansem(top_one(2,:),2);% incongruent
+    cnn_std_accuracy(2,2)=nansem(top_one(2,:));% incongruent
     
     fprintf('\n Plotting..\n');
     figure('Units','centimeters')
