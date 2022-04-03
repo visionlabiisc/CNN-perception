@@ -26,6 +26,7 @@ stim=images;
 for ind=1:length(stim)
     stim{ind}=padarray(stim{ind},[0,50],0,'both');
 end
+
 %% Behavior Effect
 reference_mi=  0.16;
 reference_name='Pramod and Arun, 2016';
@@ -33,6 +34,7 @@ y_label_name='Natural Part Advantage';
 dist_types='Euclidean';
 time_taken=cell(length(type),1);
 MI_across_layers=cell(length(type),1);
+load('L2_natunat.mat');
 
 for iter=1:length(type)
     tstart=tic;

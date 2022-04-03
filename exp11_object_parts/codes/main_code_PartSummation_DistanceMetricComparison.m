@@ -25,6 +25,7 @@ reference_name='Pramod and Arun, 2016';
 y_label_name='Natural Part Advantage';
 dist_types={'Euclidean','CityBlock','pearson','spearman'};
 time_taken=cell(length(type),1);
+load('L2_natunat.mat');
 %% Extract Features
 features=extract_features(stim,type,dagg_flag,run_path);
 %% Calculate the part-summation model with different distance metric
