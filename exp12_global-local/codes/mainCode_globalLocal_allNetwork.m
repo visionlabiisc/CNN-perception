@@ -12,7 +12,7 @@ addpath([main_folder,'dependencies',SLASH,'models']);
 addpath([main_folder,'dependencies',SLASH,'lib']);
 run_path=[main_folder,'dependencies',SLASH,'matconvnet-1.0-beta24',SLASH,'matlab',SLASH,'vl_setupnn'];
 %% STIM
-file_name_stim=['..',SLASH,'stim',SLASH,'GL.mat'];
+file_name_stim=['.',SLASH,'GL.mat'];
 load(file_name_stim);
 %% NETWORK
 type{1}='imagenet-vgg-verydeep-16';
@@ -28,6 +28,7 @@ legend_name={'VGG-16','mat.VGG-16','VGG-16 randn','VGG-face','Alexnet','Goolgene
 
 time_taken=cell(length(type),1);
 MI_across_layers=cell(length(type),1);
+load('L2_VSmain.mat')
 imagepairDetails=L2_str.Image_Pair_Details;
 
 %% Behavior effect Calculation

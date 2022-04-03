@@ -24,6 +24,8 @@ reference_name='Jacob and Arun, 2019';
 features=extract_features(stim,type{1},dagg_flag(1),run_path);
 
 %% Calculate Index for data types
+load('L2_VSmain.mat')
+imagepairDetails=L2_str.Image_Pair_Details;
 dist_types={'Euclidean','CityBlock','pearson','spearman'};
 nL=length(features{1})-1;
 N=length(features);nD=length(dist_types);
